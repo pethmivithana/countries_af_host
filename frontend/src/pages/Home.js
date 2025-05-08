@@ -73,16 +73,7 @@ function Home() {
           Explore countries around the world, view details, and save your favorites.
         </p>
         
-        {!user && (
-          <div className="flex flex-col md:flex-row justify-center gap-4 mt-6 mb-8">
-            <Link to="/login" className="btn btn-primary px-8">
-              Login
-            </Link>
-            <Link to="/register" className="btn btn-secondary px-8">
-              Register
-            </Link>
-          </div>
-        )}
+        
       </div>
       
       <SearchFilter
