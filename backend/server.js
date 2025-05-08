@@ -14,7 +14,11 @@ connectDB();
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: "https://strong-eclair-55b0c9.netlify.app/", // allow frontend URL
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true // if you're using cookies or auth
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
